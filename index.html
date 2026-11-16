@@ -78,12 +78,88 @@ header{position:relative}
 .tn{color:var(--tk);font-weight:500}
 .tintro{margin:18px 0 4px;padding:14px 20px;border-radius:12px;background:var(--card);background:color-mix(in srgb,var(--tc) 28%,var(--card));border-left:4px solid var(--tc);color:var(--text);font:italic 1.05rem/1.6 'Lora',Georgia,serif;animation:tin .6s ease both}
 @keyframes tin{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+
+/* ENTROPY JOURNAL — editorial redesign */
+:root{--bg:#f3eee5;--card:#fbf8f2;--text:#26231f;--muted:#81786d;--accent:#a94f32;--line:#ddd3c5;--ink:#29251f;--paper:#fbf8f2}
+body{font-size:16px;line-height:1.8;background:var(--bg);background-image:radial-gradient(rgba(112,91,66,.07) .55px,transparent .55px);background-size:6px 6px}
+.wrap{max-width:1080px;padding:0 34px}
+header{padding:58px 0 24px;border-bottom:1px solid var(--text);position:relative}
+header:after{content:"PERSONAL JOURNAL  ·  NOTES ON MONEY, PEOPLE & EVERYDAY LIFE";display:block;margin-top:22px;padding-top:11px;border-top:1px solid var(--line);font:10px 'Inter',system-ui,sans-serif;letter-spacing:.18em;color:var(--muted)}
+header h1{font:600 clamp(2.5rem,6vw,4.2rem)/.95 'Lora',Georgia,serif;letter-spacing:-.075em;text-transform:uppercase}
+header h1 a{gap:.18em}
+.logo{width:.72em;height:.72em;opacity:.9}
+header p{font:italic 15px/1.6 'Lora',Georgia,serif;color:var(--muted);margin-top:12px}
+nav{gap:24px;margin-top:23px;text-transform:uppercase;letter-spacing:.12em;font-size:11px}
+nav a{padding-bottom:7px}
+nav a.on{border-bottom:1px solid var(--accent)}
+.ico{top:56px;right:0;background:transparent;border-color:var(--line)}
+#app{padding-bottom:24px}
+.journal-intro{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:end;padding:38px 0 30px;border-bottom:1px solid var(--line)}
+.journal-kicker,.section-kicker{font:10px 'Inter',system-ui,sans-serif;text-transform:uppercase;letter-spacing:.2em;color:var(--accent)}
+.journal-intro h2{font:400 clamp(2rem,4vw,3.35rem)/1.13 'Lora',Georgia,serif;letter-spacing:-.045em;margin:13px 0 0;max-width:650px}
+.journal-intro p{font:14px/1.8 'Inter',system-ui,sans-serif;color:var(--muted);margin:0 0 3px;max-width:340px}
+.featured{display:grid;grid-template-columns:1.02fr .98fr;min-height:330px;margin:30px 0 46px;background:var(--ink);color:#f7f1e8;text-decoration:none;overflow:hidden}
+.featured-copy{padding:34px 38px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.featured .section-kicker{color:#d99a79}
+.featured .meta{color:#c7b9a8;margin:18px 0 8px}
+.featured h2{font:400 clamp(1.8rem,3vw,2.65rem)/1.18 'Lora',Georgia,serif;letter-spacing:-.035em;margin:5px 0 14px}
+.featured p{font:14px/1.75 'Inter',system-ui,sans-serif;color:#d1c6b8;margin:0}
+.featured .read-link{margin-top:23px;padding-bottom:5px;border-bottom:1px solid #b8795d;font:10px 'Inter',system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#f0c1a8}
+.featured-media{position:relative;min-height:300px;background:#655346}
+.featured-media img{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;filter:saturate(.72) sepia(.12)}
+.featured-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(41,37,31,.25),transparent 50%)}
+.home-tools{display:flex;align-items:center;justify-content:space-between;gap:22px;margin:0 0 5px}
+.home-tools .section-kicker{white-space:nowrap}
+#q{max-width:320px;margin:0;background:rgba(251,248,242,.75);border-radius:0;border:0;border-bottom:1px solid var(--line);font:13px 'Inter',system-ui,sans-serif;padding:10px 2px}
+.chips{padding:17px 0 22px;gap:7px}
+.chip{border-radius:2px;background:transparent;padding:6px 11px;font-size:11px;letter-spacing:.025em}
+.chip:hover,.chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip.tc{background:transparent;border-color:var(--line);color:var(--tk);opacity:1}
+.chip.tc:hover,.chip.tc.on{background:var(--tc);border-color:var(--tk);color:var(--text);box-shadow:none}
+#plist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 34px;border-top:1px solid var(--line)}
+.post{margin:0;padding:24px 4px 27px;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;box-shadow:none!important;min-height:185px;transition:padding .2s ease,color .2s ease}
+.post:hover{transform:none;padding-left:10px;border-color:var(--line);box-shadow:none!important}
+.post h2{font:400 1.35rem/1.32 'Lora',Georgia,serif;letter-spacing:-.025em;margin:11px 0 8px}
+.post p{font:13px/1.7 'Inter',system-ui,sans-serif;color:var(--muted)}
+.post .meta{font-size:10px;letter-spacing:.07em;text-transform:uppercase}
+.post:hover h2{color:var(--accent)}
+.tn{font-weight:600}
+.tintro{border-radius:0;margin:0 0 18px;padding:13px 18px;font-size:1rem}
+.empty{grid-column:1/-1}
+article{max-width:740px;margin:0 auto;padding:48px 0 28px}
+article h1{font:400 clamp(2.1rem,5vw,3.3rem)/1.18 'Lora',Georgia,serif;letter-spacing:-.045em;margin:12px 0 30px}
+article p{font-size:17px;line-height:1.95;margin-bottom:1.45em}
+article .meta{text-transform:uppercase;letter-spacing:.09em;font-size:11px}
+.ph{font-family:'Lora',Georgia,serif;letter-spacing:-.025em}
+footer{border-top:1px solid var(--line);padding:25px 0 45px;text-transform:uppercase;letter-spacing:.15em;font-size:10px}
+@media(max-width:700px){
+ .wrap{padding:0 20px}
+ header{padding:42px 0 20px}
+ header:after{font-size:8px;letter-spacing:.12em}
+ header h1{font-size:2.65rem}
+ header p{max-width:80%;font-size:13px}
+ .ico{top:40px}
+ .journal-intro{grid-template-columns:1fr;gap:12px;padding:28px 0 24px}
+ .journal-intro p{max-width:100%}
+ .featured{grid-template-columns:1fr;margin:22px 0 34px}
+ .featured-copy{padding:27px 24px}
+ .featured-media{min-height:210px;grid-row:1}
+ .home-tools{align-items:flex-start;flex-direction:column;gap:8px}
+ #q{max-width:none;width:100%}
+ #plist{grid-template-columns:1fr}
+ .post{min-height:0;padding:21px 2px 23px}
+ .post h2{font-size:1.25rem}
+ article{padding-top:34px}
+ article p{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){.post,.featured{transition:none}}
+
 </style>
 <style>artifact-sync,artifact-local{display:contents}</style><style>artifact-sync,artifact-local{display:contents}</style><style>artifact-sync,artifact-local{display:contents}</style><style>artifact-sync,artifact-local{display:contents}</style><style>artifact-sync,artifact-local{display:contents}</style><style>artifact-sync,artifact-local{display:contents}</style><style>artifact-sync,artifact-local{display:contents}</style><style>artifact-sync,artifact-local{display:contents}</style><style>artifact-sync,artifact-local{display:contents}</style><style>artifact-sync,artifact-local{display:contents}</style></head>
 <body>
 <div class="wrap">
 <header>
-<h1><a href="#"><svg class="logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style=""><path d="M12.5 7L14.6 2.2h3.4"></path><path d="M5.2 7.2h13.6"></path><path d="M6.3 7.2l1.3 12.6a1.8 1.8 0 0 0 1.8 1.6h5.2a1.8 1.8 0 0 0 1.8-1.6l1.3-12.6" fill="currentColor" fill-opacity=".14" style=""></path><path d="M6.9 12.2h10.2" stroke-width="1.2" opacity=".7"></path><rect x="8.8" y="13.2" width="3.2" height="3.2" rx=".8" transform="rotate(-10 10.4 14.8)"></rect><rect x="12.6" y="15.4" width="3" height="3" rx=".8" transform="rotate(12 14.1 16.9)"></rect></svg>Chuyện bên ly Coldbrew</a></h1>
+<h1><a href="#"><svg class="logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style=""><path d="M12.5 7L14.6 2.2h3.4"></path><path d="M5.2 7.2h13.6"></path><path d="M6.3 7.2l1.3 12.6a1.8 1.8 0 0 0 1.8 1.6h5.2a1.8 1.8 0 0 0 1.8-1.6l1.3-12.6" fill="currentColor" fill-opacity=".14" style=""></path><path d="M6.9 12.2h10.2" stroke-width="1.2" opacity=".7"></path><rect x="8.8" y="13.2" width="3.2" height="3.2" rx=".8" transform="rotate(-10 10.4 14.8)"></rect><rect x="12.6" y="15.4" width="3" height="3" rx=".8" transform="rotate(12 14.1 16.9)"></rect></svg>Entropy</a></h1>
 <p>Chuyện về tiền, chuyện về người, và những điều nho nhỏ trong cuộc sống.</p>
 <nav><a id="n-home" href="#" class="on">Bài viết</a><a id="n-about" href="#gioi-thieu" class="">Giới thiệu</a></nav>
 <button class="ico" id="theme" type="button" aria-label="Đổi giao diện sáng hoặc tối" title="Sáng / tối"><svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg><svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></button>
@@ -135,15 +211,20 @@ function seriesPage(sl){var name=seriesList().filter(function(x){return slug(x)=
 function today(){var d=new Date();return d.getDate()+' tháng '+(d.getMonth()+1)+', '+d.getFullYear()}
 var curF='';
 function nz(s){return String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D').toLowerCase()}
-function cards(f,q){var k=nz(q||'').trim();var l=posts.filter(function(p){if(f&&slug(p.topic)!==f)return false;return !k||nz([p.title,p.topic,p.series,p.excerpt,p.body.join(' ')].join(' ')).indexOf(k)>=0});
+function cards(f,q,skip){var k=nz(q||'').trim();var l=posts.filter(function(p){if(skip&&p.id===skip)return false;if(f&&slug(p.topic)!==f)return false;return !k||nz([p.title,p.topic,p.series,p.excerpt,p.body.join(' ')].join(' ')).indexOf(k)>=0});
  if(!l.length)return '<div class="empty">Không có bài nào khớp với “'+esc(q||'')+'”.</div>';
  return l.map(function(p){return '<a class="post '+tcls(p.topic)+(p.draft?' draft':'')+'" href="#'+p.id+'"><div class="meta">'+meta(p)+'</div><h2>'+esc(p.title)+'</h2><p>'+esc(p.excerpt)+'</p></a>'}).join('')}
 var TI={'chuyen-tien-bac':'Nơi mình biến những điều học được thành hiểu biết của riêng mình'};
 function topicIntro(f){if(!f||!TI[f])return '';var t=topics().filter(function(x){return slug(x)===f})[0];return t?'<div class="tintro '+tcls(t)+'">'+esc(TI[f])+'</div>':''}
 function home(f){
- var chips='<div class="chips"><a class="chip'+(f?'':' on')+'" href="#">Tất cả</a>'+topics().map(function(t){return '<a class="chip tc '+tcls(t)+(slug(t)===f?' on':'')+'" href="#chu-de-'+slug(t)+'">'+esc(t)+'</a>'}).join('')+'</div>';
+ var chips='<div class="chips"><a class="chip'+(f?'':' on')+'" href="#">Tất cả bài viết</a>'+topics().map(function(t){return '<a class="chip tc '+tcls(t)+(slug(t)===f?' on':'')+'" href="#chu-de-'+slug(t)+'">'+esc(t)+'</a>'}).join('')+'</div>';
  var add=canEdit?'<div class="bar"><a class="btn" href="#viet-bai">+ Viết bài mới</a><button class="btn alt" id="dl">Tải về file HTML</button><span id="msg"></span></div>':'';
- curF=f||'';var intro=topicIntro(f);var sb='<input id="q" type="search" placeholder="Tìm bài viết…" aria-label="Tìm bài viết" autocomplete="off">';return add+sb+chips+intro+tagsFor(f)+'<div id="plist">'+cards(curF,'')+'</div>';
+ curF=f||'';
+ var intro='<section class="journal-intro"><div><div class="journal-kicker">A journal by Hana · Vol. 01</div><h2>Một nơi để nghĩ chậm hơn, và nhìn mọi thứ sâu hơn.</h2></div><p>Những câu chuyện về tiền bạc, con người và đời sống thường ngày — được ghi lại từ sự tò mò, quan sát và những câu hỏi chưa có lời giải.</p></section>';
+ var lead=(!f&&!nz(document.getElementById('q')?document.getElementById('q').value:'').trim())?posts[0]:null;
+ var feature=lead?'<a class="featured" href="#'+lead.id+'"><div class="featured-copy"><div class="section-kicker">Bài viết nổi bật · Editor’s pick</div><div class="meta">'+meta(lead)+'</div><h2>'+esc(lead.title)+'</h2><p>'+esc(lead.excerpt)+'</p><span class="read-link">Đọc bài viết&nbsp; ↗</span></div><div class="featured-media"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=85" alt="Sổ ghi chép và máy tính trên bàn làm việc" loading="lazy"></div></a>':'';
+ var sb='<div class="home-tools"><span class="section-kicker">'+(f?'Đang xem chủ đề':'Khám phá các bài viết')+'</span><input id="q" type="search" placeholder="Tìm trong Entropy…" aria-label="Tìm bài viết" autocomplete="off"></div>';
+ return add+intro+feature+sb+chips+topicIntro(f)+tagsFor(f)+'<div id="plist">'+cards(curF,'',lead?lead.id:null)+'</div>';
 }
 function about(){return '<article><h1>Xin chào, mình là…</h1><p>Đây là góc nhỏ để mình viết về cuộc sống thường ngày: những buổi sáng, những món ăn, những suy nghĩ vụn vặt.</p><p>Bạn hãy thay phần giới thiệu này bằng đôi dòng về chính bạn nhé.</p><a class="back" href="#">← Về trang chủ</a></article>'}
 function editor(p){
@@ -202,7 +283,7 @@ function render(){
  if(bind)bind();
  initTb();
  var dl=document.getElementById('dl');if(dl)dl.onclick=download;
- var qi=document.getElementById('q');if(qi)qi.oninput=function(){document.getElementById('plist').innerHTML=cards(curF,qi.value)};
+ var qi=document.getElementById('q');if(qi)qi.oninput=function(){var lead=(!curF&&!nz(qi.value).trim())?posts[0]:null;document.getElementById('plist').innerHTML=cards(curF,qi.value,lead?lead.id:null)};
  var fd=document.getElementById('f-draft'),sv=document.getElementById('save');if(fd&&sv){var upd=function(){sv.textContent=fd.checked?'Lưu nháp':'Lưu và đăng'};fd.onchange=upd;upd()}
  window.scrollTo(0,0);onScroll();
 }
