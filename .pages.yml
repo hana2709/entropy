@@ -48,3 +48,16 @@ content:
         label: Nội dung (mỗi mục là một đoạn)
         type: text
         list: true
+  - name: settings
+    label: Tên trang
+    type: file
+    path: content/settings.json
+    format: json
+    fields:
+      - name: siteTitle
+        label: Tên page
+        type: string
+        required: true
+      - name: tagline
+        label: Dòng mô tả
+        type: string
