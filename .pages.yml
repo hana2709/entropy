@@ -1,0 +1,50 @@
+media: media
+content:
+  - name: posts
+    label: Bài viết
+    type: file
+    path: content/posts.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        label: Mã bài viết
+        type: string
+        readonly: true
+      - name: title
+        label: Tiêu đề
+        type: string
+        required: true
+      - name: topic
+        label: Chủ đề
+        type: string
+        required: true
+      - name: series
+        label: Series
+        type: string
+      - name: date
+        label: Ngày đăng
+        type: string
+      - name: excerpt
+        label: Mô tả ngắn
+        type: text
+      - name: body
+        label: Nội dung bài viết (mỗi mục là một đoạn)
+        type: text
+        list: true
+      - name: draft
+        label: Bản nháp
+        type: boolean
+  - name: about
+    label: Trang giới thiệu
+    type: file
+    path: content/about.json
+    format: json
+    fields:
+      - name: title
+        label: Tiêu đề
+        type: string
+      - name: body
+        label: Nội dung (mỗi mục là một đoạn)
+        type: text
+        list: true
