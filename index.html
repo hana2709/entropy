@@ -154,6 +154,22 @@ footer{border-top:1px solid var(--line);padding:25px 0 45px;text-transform:upper
 }
 @media(prefers-reduced-motion:reduce){.post,.featured{transition:none}}
 
+
+/* User-requested refinements: smaller masthead and persistent theme switch */
+header h1{font-size:clamp(2.15rem,5vw,3.55rem)}
+.ico{
+  position:fixed;
+  top:max(16px,env(safe-area-inset-top,0px));
+  right:max(16px,env(safe-area-inset-right,0px));
+  z-index:1000;
+  width:42px;height:42px;
+  background:var(--card);
+  border:1px solid var(--line);
+  box-shadow:0 2px 10px rgba(40,30,20,.12);
+}
+@media(max-width:700px){
+  header h1{font-size:2.15rem}
+}
 </style>
 <style>artifact-sync,artifact-local{display:contents}</style><style>artifact-sync,artifact-local{display:contents}</style><style>artifact-sync,artifact-local{display:contents}</style><style>artifact-sync,artifact-local{display:contents}</style><style>artifact-sync,artifact-local{display:contents}</style><style>artifact-sync,artifact-local{display:contents}</style><style>artifact-sync,artifact-local{display:contents}</style><style>artifact-sync,artifact-local{display:contents}</style><style>artifact-sync,artifact-local{display:contents}</style><style>artifact-sync,artifact-local{display:contents}</style></head>
 <body>
